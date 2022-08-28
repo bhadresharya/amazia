@@ -1,0 +1,34 @@
+{
+  "name": "amazia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "init": "gulp init",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhadresharya/amazia.git"
+  },
+  "author": "Bhadresh Arya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhadresharya/amazia/issues"
+  },
+  "homepage": "https://github.com/bhadresharya/amazia#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.0.0-beta3",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^4.12.0"
+  }
+}

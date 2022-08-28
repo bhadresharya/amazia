@@ -1,0 +1,204 @@
+/*
+Style Sheet for Amazia
+
+version: 1.0
+authors: Bhadresh Arya
+email: bhadresharya@hotmail.com
+*/
+
+@import "bootstrap/bootstrap.scss";
+
+// General Properties
+section {
+    margin-bottom: 7.5rem;
+}
+
+// Navbar Properties
+.navbar {
+    font-weight: bold;
+    padding: 1rem 0;
+    &-brand {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    &-nav {
+        font-size: $small-font-size;
+        display: none;
+        margin-left: auto;
+        @include media-breakpoint-up(lg) {
+            display: flex;
+        }
+        .nav-item {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            .nav-link {
+                color: $white;
+                text-transform: uppercase;
+            }
+            .dropdown-item {
+                font-size: $small-font-size;
+            }
+        }
+    }
+}
+
+// Main Header Properties
+.main-header {
+    height: 125vh;
+    min-height: 800px;
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1523908511403-7fc7b25592f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 100% 100%;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.75;
+        background: #071590;
+        background: -moz-linear-gradient(45deg, #071590 0%, #ff003c 100%);
+        background: -webkit-linear-gradient(45deg, #071590 0%, #ff003c 100%);
+        background: linear-gradient(45deg, #071590 0%, #ff003c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071590', endColorstr='#ff003c', GradientType=1);
+    }
+    .main-header-bg {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+        .main-header-content {
+            text-align: center;
+            margin-top: 125px;
+            a {
+                color: $white;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.text-gradient {
+    background: #071590;
+    background: -moz-linear-gradient(45deg, #071590 0%, #ff003c 50%);
+    background: -webkit-linear-gradient(45deg, #071590 0%, #ff003c 50%);
+    background: linear-gradient(45deg, #071590 0%, #ff003c 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#071590', endColorstr='#ff003c', GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    font-size: 2.75rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1rem;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        height: 200px;
+        width: 200px;
+        background: url(../images/title-bg.png) no-repeat;
+        background-size: cover;
+        z-index: 1;
+    }
+    span {
+        display: block;
+        width: fit-content;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        position: relative;
+        background: #ff003c;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.25rem;
+        &:before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 1.5px);
+            left: -.5rem;
+            height: 3px;
+            width: 3px;
+            border-radius: 50%;
+            background: #071590;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 1.5px);
+            right: -1.5rem;
+            height: 3px;
+            width: 20px;
+            background: #ff003c;
+        }
+    }
+}
+
+.btn-primary {
+    background: #ff003c;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    transition: 0.5s all !important;
+}
+
+.btn-primary:hover {
+    background: #ff003c;
+    border-color: #ff003c;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.btn-outline-light {
+    transition: 0.5s all !important;
+}
+
+.btn-outline-light:hover {
+    background: #fff;
+    border-color: #fff;
+    border-radius: 25px;
+}
+
+.btn-outline-light:active {
+    transform: scale(0.95);
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+    background: #ff003c !important;
+    border-color: #ff003c !important;
+    color: #fff !important;
+}
+
+/* </btn> */
+/* <services> */
+.service-sec .card {
+    transition: 0.5s all;
+    transform: translateY(0);
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 3px 28px 24px -33px #071590;
+    }
+}
+
+.service-icon {
+    width: 64px;
+    margin-bottom: 1rem;
+}
+
+
